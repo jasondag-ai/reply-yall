@@ -1,0 +1,24 @@
+:root {
+  /* Brand colours */
+  --ink: #1b1f24;
+  --paper: #f4f1ea;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --line: #e5e1d8;
+  --accent: #2f6fed;
+  --danger: #d94841;
+  --warn: #c9851a;
+  --safe: #2f7d4f;
+  --hr: #5b3a8f;
+
+  /* Fonts */
+  --font-ui: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  --font-headline: 'IBM Plex Serif', Georgia, serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+
+  /* Layout */
+  --gutter: 20px;
+  --radius: 16px;
+  --tap: 60px;
+  --column: 440px;
+}
