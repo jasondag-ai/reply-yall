@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest'
+import { emails } from './emails'
 import { strings } from './strings'
 
 function allText(node: unknown): string[] {
@@ -14,8 +15,8 @@ describe('game text', () => {
   })
 
   it('never uses em dashes', () => {
-    const text = allText(strings)
-    expect(text.length).toBeGreaterThan(0)
+    const text = [...allText(strings), ...allText(emails)]
+    expect(text.length).toBeGreaterThan(50)
     for (const line of text) expect(line).not.toContain('—')
   })
 })
