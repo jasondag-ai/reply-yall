@@ -16,7 +16,8 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    # Pinned: ubuntu-latest moves to Ubuntu 26 on Oct 19, 2026, and Playwright's browsers need a known OS.
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5
@@ -26,6 +27,8 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run build
+      - run: npx playwright install --with-deps chromium webkit
+      - run: npx playwright test
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
